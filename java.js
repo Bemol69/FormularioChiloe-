@@ -84,3 +84,45 @@ function validateForm() {
   
     return isValid;
   }
+  // Función para crear la carta de presentación
+  function crearCartaPresentation() {
+    const cartaText = `
+      Estimados Señores,
+  
+      Me dirijo a ustedes con el fin de presentar mi postulación para el trabajo de apoyo ambiental en Chiloé.
+  
+      Nombre: ${nombre.value} ${apellidoPaterno.value} ${apellidoMaterno.value}
+      RUT: ${rut.value}
+      Fecha de Nacimiento: ${fechaNacimiento.value}
+      Edad: ${edad.value}
+      Género: ${genero.value}
+      Correo Electrónico: ${email.value}
+      Celular: ${celular.value}
+      Profesión: ${profesion.value}
+  
+      Motivación:
+      ${motivacion.value}
+  
+      Agradezco de antemano su consideración y quedó atento a sus comentarios.
+  
+      Saludos cordiales,
+      ${nombre.value} ${apellidoPaterno.value} ${apellidoMaterno.value}
+    `;
+  
+    carta.value = cartaText;
+  }
+  
+  // Manejar el envío del formulario
+  form.addEventListener('submit', (event) => {
+    event.preventDefault(); // Evitar el envío del formulario
+  
+    if (validateForm()) {
+      // Enviar el formulario
+      alert('Formulario enviado correctamente');
+      form.reset();
+      carta.value = '';
+    }
+  });
+  
+  // Manejar el botón "Crear Carta"
+  crearCarta.addEventListener('click', crearCartaPresentation);
