@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Trabajo</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  
+    <section class="h-100 gradient-form">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-xl-10">
+                    <div class="card rounded-3 text-black">
+                        <div class="row g-0">
+                            <div class="col-lg-6">
+                                <div class="card-body p-md-5 mx-md-4">
+                                    <div class="text-center">
+                                        <img src="logo.jpg" style="width: 185px;" alt="logo">
+                                        <h4 class="mt-1 mb-5 pb-1">¡Únete a Apoyo Ambiental Chiloe!</h4>
+                                    </div>
+                                    <form id="registrationForm">
+                                        <p>Por favor completa el formulario para postular al trabajo </p>
+                                        
+                                        <!-- Mensajes de validación -->
+                                        <div id="validationMessages" class="alert alert-danger" role="alert" style="display: none;"></div>
+
+                                        <div class="form-outline mb-4">
+                                            <input type="text" id="rut" class="form-control" placeholder="Rut (sin punto ni guion) " />
+                                        </div>
+                                        <div class="form-outline mb-4">
+                                            <input type="text" id="apellidoPaterno" class="form-control" placeholder="Apellido Paterno" />
+                                        </div>
+                                        <div class="form-outline mb-4">
+                                            <input type="text" id="apellidoMaterno" class="form-control" placeholder="Apellido Materno" />
+                                        </div>
+                                        <div class="form-outline mb-4">
+                                            <input type="text" id="nombre" class="form-control" placeholder="Nombre" />
+                                        </div>
+                                        <div class="form-outline mb-4">
+                                            <input type="date" id="fechaNacimiento" class="form-control" placeholder="Fecha de Nacimiento" />
+                                        </div>
+                                        <div class="form-outline mb-4">
+                                            <input type="number" id="edad" class="form-control" placeholder="Edad" />
+                                        </div>
+                                        <div class="form-outline mb-4">
+                                            <select id="genero" class="form-control">
+                                                <option value="">Seleccione género</option>
+                                                <option value="masculino">Masculino</option>
+                                                <option value="femenino">Femenino</option>
+                                                <option value="otro">Otro</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-outline mb-4">
+                                            <input type="email" id="email" class="form-control" placeholder="Correo Electrónico" />
+                                        </div>
+                                        <div class="form-outline mb-4">
+                                            <input type="tel" id="celular" class="form-control" placeholder="Celular" />
+                                        </div>
+                                        <div class="form-outline mb-4">
+                                            <input type="text" id="profesion" class="form-control" placeholder="Profesión" />
+                                        </div>
+                                        <div class="form-outline mb-4">
+                                            <textarea id="motivacion" class="form-control" placeholder="Motivación para postular al trabajo"></textarea>
+                                        </div>
+                                        <div class="text-center pt-1 mb-5 pb-1">
+                                            <button id="registrationBtn" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">Enviar</button>
+                                        </div>
+                                        
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                                <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                                    <div class="carta-container">
+                                        <h4 class="mb-4">Carta De Recomendación</h4>
+                                        <div class="text-center pt-1 mb-5 pb-1">
+                                            <button id="crearCarta" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button">Crear Carta</button>
+                                        </div>
+                                        <textarea id="carta" class="form-control carta-textarea" placeholder="Carta de presentación" readonly></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="java.js"></script>
+</html>
